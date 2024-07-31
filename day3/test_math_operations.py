@@ -1,6 +1,6 @@
-from math_operations import add, subtract, multiply, divide
+from math_operations import add, subtract, multiply, divide, mean
 import pytest
-
+import numpy as np
 
 def test_add():
     assert add(1, 5) == 6
@@ -37,7 +37,9 @@ def test_divide():
     assert divide(0, 2) == 0
 
 
-"""
-def test_fail():
-    assert add(0, 0) == 1
-"""
+@pytest.mark.parametrize("numbers, expected", [
+    ([10, 20, 30], 20),
+    ([1.5, 2.5, 3.5], 2.5)
+    ])
+def test_mean(numbers, expected):
+    assert mean(numbers) == expected

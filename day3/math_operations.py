@@ -1,3 +1,5 @@
+import numpy as np
+
 def add(a, b):
     """
     adds a together with b
@@ -42,4 +44,13 @@ def divide(a, b):
     return a / b
 
 
-print(add(5, 10))
+def mean(numbers):
+    """
+    calculates the mean of numbers
+
+    numbers : numpy array of numbers
+    """
+
+    return np.mean(numbers)
+
+print(mean(np.array([1,2,4,5,6,78,8,9])))
