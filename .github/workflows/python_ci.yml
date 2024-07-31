@@ -15,4 +15,4 @@ jobs:
     - name: Install dependencies
       run: python -m pip install --upgrade pip && pip install pytest
     - name: Testing the code with pytest
-      run: pytest
+      run: cd day3 && pytest
